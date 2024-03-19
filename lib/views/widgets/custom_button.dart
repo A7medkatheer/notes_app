@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notes_app/views/widgets/constant.dart';
 
 class CustomButton extends StatelessWidget {
@@ -15,12 +16,12 @@ final void Function()? ontap;
           borderRadius: BorderRadius.circular(16),
         ),
         width: MediaQuery.of(context).size.width,
-        height: 55,
-        child: const Center(
+        height: 55.h,
+        child:  Center(
           child: Text(
             "add",
             style: TextStyle(
-                color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
+                color: Colors.black, fontSize: 18.sp, fontWeight: FontWeight.bold),
           ),
         ),
       ),

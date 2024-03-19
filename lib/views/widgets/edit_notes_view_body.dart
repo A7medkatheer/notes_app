@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notes_app/views/widgets/custom_text_field.dart';
 import 'package:notes_app/views/widgets/notes_view_appbar.dart';
 
@@ -7,25 +8,25 @@ class EditNotesViewbody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+    return  Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
           SizedBox(
-            height: 50,
+            height: 50.h,
           ),
-          NotesViewAppBar(
+          const NotesViewAppBar(
             title: "Edit Note",
             icon: Icons.check,
           ),
           SizedBox(
-            height: 50,
+            height: 50.h,
           ),
-          CustomTextField(hintText: "Title"),
+          const CustomTextField(hintText: "Title"),
           SizedBox(
-            height: 16,
+            height: 16.h,
           ),
-          CustomTextField(hintText: "content", maxLines: 5),
+          const CustomTextField(hintText: "content", maxLines: 5),
         ],
       ),
     );

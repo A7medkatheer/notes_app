@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:notes_app/views/widgets/custom_button.dart';
 import 'package:notes_app/views/widgets/custom_text_field.dart';
@@ -38,8 +39,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
       autovalidateMode: autovalidateMode,
       child: Column(
         children: [
-          const SizedBox(
-            height: 32,
+           SizedBox(
+            height: 32.h,
           ),
           CustomTextField(
             onsave: (value) {
@@ -47,8 +48,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
             },
             hintText: "add Title",
           ),
-          const SizedBox(
-            height: 16,
+           SizedBox(
+            height: 16.h,
           ),
           CustomTextField(
             onsave: (value) {
@@ -57,8 +58,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
             hintText: "content",
             maxLines: 5,
           ),
-          const SizedBox(
-            height: 100,
+           SizedBox(
+            height: 100.h,
           ),
           CustomButton(
             ontap: () {
@@ -71,8 +72,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
               }
             },
           ),
-          const SizedBox(
-            height: 32,
+           SizedBox(
+            height: 32.h,
           ),
         ],
       ),

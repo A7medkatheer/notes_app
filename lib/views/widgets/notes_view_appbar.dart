@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NotesViewAppBar extends StatelessWidget {
   const NotesViewAppBar({super.key, required this.icon, required this.title});
@@ -10,14 +11,14 @@ class NotesViewAppBar extends StatelessWidget {
       children: [
         Text(
           title,
-          style: const TextStyle(
-            fontSize: 30,
+          style:  TextStyle(
+            fontSize: 30.sp,
           ),
         ),
         const Spacer(),
         Container(
-          height: 50,
-          width: 50,
+          height: 50.h,
+          width: 50.w,
           // color: Colors.white.withOpacity(.02),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
@@ -26,7 +27,7 @@ class NotesViewAppBar extends StatelessWidget {
           child: IconButton(
             icon: Icon(
               icon,
-              size: 30,
+              size: 30.sp,
               color: Colors.white,
             ),
             onPressed: () {},

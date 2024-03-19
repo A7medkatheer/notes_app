@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:notes_app/views/edit_notes_view.dart';
 
@@ -20,10 +21,10 @@ class NoteItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              title: const Text(
+              title:  Text(
                 'Flutter tips',
                 style: TextStyle(
-                    fontSize: 26,
+                    fontSize: 26.sp,
                     // fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
@@ -32,22 +33,22 @@ class NoteItem extends StatelessWidget {
                 child: Text(
                   'Build yours career with tharwat samy',
                   style: TextStyle(
-                      fontSize: 18, color: Colors.black.withOpacity(.2)),
+                      fontSize: 18.sp, color: Colors.black.withOpacity(.2)),
                 ),
               ),
-              trailing: const Icon(
+              trailing:  Icon(
                 FontAwesomeIcons.trash,
                 color: Colors.black,
-                size: 24,
+                size: 24.sp,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 10),
+              padding:  const EdgeInsets.only(right: 10),
               child: Text(
                 'May 20, 2021',
                 style: TextStyle(
                   color: Colors.black.withOpacity(.2),
-                  fontSize: 16,
+                  fontSize: 16.sp,
                 ),
               ),
             ),
