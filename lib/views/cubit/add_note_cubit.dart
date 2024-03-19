@@ -1,4 +1,4 @@
-import 'dart:math';
+
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class AddNoteCubit extends Cubit<AddNoteState> {
       await notesBox.add(note);
     } catch (e) {
       emit(AddNotefailure(e.toString()));
-      // TODO
+    
     }
   }
 }
