@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:notes_app/models/notes_models.dart';
+import 'package:notes_app/views/cubit/add_note_cubit.dart';
 import 'package:notes_app/views/widgets/custom_button.dart';
 import 'package:notes_app/views/widgets/custom_text_field.dart';
 
@@ -24,7 +27,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
       autovalidateMode: autovalidateMode,
       child: Column(
         children: [
-           SizedBox(
+          SizedBox(
             height: 32.h,
           ),
           CustomTextField(
@@ -33,7 +36,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             },
             hintText: "add Title",
           ),
-           SizedBox(
+          SizedBox(
             height: 16.h,
           ),
           CustomTextField(
@@ -43,21 +46,27 @@ class _AddNoteFormState extends State<AddNoteForm> {
             hintText: "content",
             maxLines: 5,
           ),
-           SizedBox(
+          SizedBox(
             height: 100.h,
           ),
           CustomButton(
             ontap: () {
               if (formKey.currentState!.validate()) {
                 formKey.currentState!.save();
-                Navigator.pop(context, [title, subTitle]);
+                var noteModel = NotesModel(
+                    title: title!,
+                    subTitle: subTitle!,
+                    date: DateTime.now().toString(),
+                    color: Colors.blue.value);
+                BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
+                Navigator.pop(context);
               } else {
                 autovalidateMode = AutovalidateMode.always;
                 setState(() {});
               }
             },
           ),
-           SizedBox(
+          SizedBox(
             height: 32.h,
           ),
         ],
