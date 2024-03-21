@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notes_app/models/notes_models.dart';
-import 'package:notes_app/views/cubit/add_note_cubit.dart';
+import 'package:notes_app/views/add_notes_cubit/add_note_cubit.dart';
 import 'package:notes_app/views/widgets/custom_button.dart';
 import 'package:notes_app/views/widgets/custom_text_field.dart';
 
