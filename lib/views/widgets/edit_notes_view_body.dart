@@ -3,8 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notes_app/models/notes_models.dart';
 import 'package:notes_app/notes_cubit/notes_cubit.dart';
-import 'package:notes_app/views/widgets/add_note_form.dart';
-// import 'package:notes_app/models/notes_models.dart';
 import 'package:notes_app/views/widgets/custom_text_field.dart';
 import 'package:notes_app/views/widgets/notes_view_appbar.dart';
 
