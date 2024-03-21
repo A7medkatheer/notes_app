@@ -55,13 +55,16 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 ontap: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
+                    var currentData = DateTime.now();
+                    var formattedDate =
+                        "${currentData.hour}:${currentData.minute}\n ${currentData.year}-${currentData.month}-${currentData.day}";
                     var noteModel = NotesModel(
                         title: title!,
                         subTitle: subTitle!,
-                        date: DateTime.now().toString(),
+                        date: formattedDate,
                         color: Colors.blue.value);
                     BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
-                    Navigator.pop(context);
+                    
                   } else {
                     autovalidateMode = AutovalidateMode.always;
                     setState(() {});

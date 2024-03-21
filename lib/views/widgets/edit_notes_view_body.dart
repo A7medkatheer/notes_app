@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+// import 'package:notes_app/models/notes_models.dart';
 import 'package:notes_app/views/widgets/custom_text_field.dart';
 import 'package:notes_app/views/widgets/notes_view_appbar.dart';
 
-class EditNotesViewbody extends StatelessWidget {
-  const EditNotesViewbody({Key? key}) : super(key: key);
+class EditNotesViewbody extends StatefulWidget {
+  const EditNotesViewbody({Key? key,}) : super(key: key);
+  // final NotesModel note;
 
+  @override
+  State<EditNotesViewbody> createState() => _EditNotesViewbodyState();
+}
+
+class _EditNotesViewbodyState extends State<EditNotesViewbody> {
   @override
   Widget build(BuildContext context) {
     return  Padding(

@@ -1,8 +1,9 @@
+// import 'dart:js_interop_unsafe';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notes_app/notes_cubit/notes_cubit.dart';
-
 import 'package:notes_app/views/widgets/notes_list_view.dart';
 import 'package:notes_app/views/widgets/notes_view_appbar.dart';
 
@@ -19,6 +20,8 @@ class _NotesViewBodyState extends State<NotesViewBody> {
     BlocProvider.of<NotesCubit>(context).fetchAllNotes();
     super.initState();
   }
+
+ 
  
   @override
   Widget build(BuildContext context) {
@@ -30,11 +33,14 @@ class _NotesViewBodyState extends State<NotesViewBody> {
             height: 50.h,
           ),
           const NotesViewAppBar(
+            
             title: "Notes",
             icon: Icons.search,
           ),
           const Expanded(
+            
             child: NotesListView(),
+            
           )
         ],
       ),
