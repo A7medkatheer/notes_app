@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NotesViewAppBar extends StatelessWidget {
-  const NotesViewAppBar({Key? key,  required this.icon, required this.title}) : super(key: key);
+  const NotesViewAppBar(
+      {Key? key, required this.icon, required this.title, this.onpressed})
+      : super(key: key);
   final IconData icon;
   final String title;
+  final void Function()? onpressed;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
           title,
-          style:  TextStyle(
+          style: TextStyle(
             fontSize: 30.sp,
           ),
         ),
@@ -30,7 +33,7 @@ class NotesViewAppBar extends StatelessWidget {
               size: 30.sp,
               color: Colors.white,
             ),
-            onPressed: () {},
+            onPressed: onpressed,
           ),
         ),
       ],
