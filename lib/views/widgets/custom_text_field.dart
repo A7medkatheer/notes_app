@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/views/widgets/constant.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({
-    super.key,
+  const CustomTextField({Key? key, 
+    // super.key,
     required this.hintText,
     this.maxLines = 1,   this.onsave,
-  });
+  }) : super(key: key);
   final String hintText;
   final int maxLines;
   final void Function(String?)? onsave;

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notes_app/views/widgets/constant.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.ontap, this.isloading = false});
+  const CustomButton({Key? key, required this.ontap, this.isloading = false}) : super(key: key);
   final void Function()? ontap;
   final bool isloading;
   @override

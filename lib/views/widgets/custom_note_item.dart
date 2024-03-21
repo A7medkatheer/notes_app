@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notes_app/models/notes_models.dart';
+
 import 'package:notes_app/views/edit_notes_view.dart';
 
 class NoteItem extends StatelessWidget {
-  const NoteItem({super.key});
+  const NoteItem({Key? key, required this.note}) : super(key: key);
+  final NotesModel note;
 
   @override
   Widget build(BuildContext context) {
@@ -14,15 +17,15 @@ class NoteItem extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.only(top: 24, left: 16, bottom: 24),
         decoration: BoxDecoration(
-          color: const Color(0xffFFCC80),
+          color: Color(note.color),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              title:  Text(
-                'Flutter tips',
+              title: Text(
+                note.title,
                 style: TextStyle(
                     fontSize: 26.sp,
                     // fontWeight: FontWeight.bold,
@@ -31,21 +34,21 @@ class NoteItem extends StatelessWidget {
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 16, bottom: 16),
                 child: Text(
-                  'Build yours career with tharwat samy',
+                  note.subTitle,
                   style: TextStyle(
                       fontSize: 18.sp, color: Colors.black.withOpacity(.2)),
                 ),
               ),
-              trailing:  Icon(
+              trailing: Icon(
                 FontAwesomeIcons.trash,
                 color: Colors.black,
                 size: 24.sp,
               ),
             ),
             Padding(
-              padding:  const EdgeInsets.only(right: 10),
+              padding: const EdgeInsets.only(right: 10),
               child: Text(
-                'May 20, 2021',
+                note.date,
                 style: TextStyle(
                   color: Colors.black.withOpacity(.2),
                   fontSize: 16.sp,

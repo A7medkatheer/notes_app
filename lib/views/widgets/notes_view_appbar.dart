@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NotesViewAppBar extends StatelessWidget {
-  const NotesViewAppBar({super.key, required this.icon, required this.title});
+  const NotesViewAppBar({Key? key,  required this.icon, required this.title}) : super(key: key);
   final IconData icon;
   final String title;
   @override

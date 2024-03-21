@@ -4,7 +4,7 @@ import 'package:notes_app/views/widgets/custom_text_field.dart';
 import 'package:notes_app/views/widgets/notes_view_appbar.dart';
 
 class EditNotesViewbody extends StatelessWidget {
-  const EditNotesViewbody({super.key});
+  const EditNotesViewbody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

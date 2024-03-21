@@ -9,8 +9,6 @@ import 'package:notes_app/views/widgets/constant.dart';
 
 void main() async {
   await Hive.initFlutter();
-
-
   Bloc.observer = SimpleBlocObserver();
   Hive.registerAdapter(NotesModelAdapter());
   await Hive.openBox<NotesModel>(kNotesBox);
@@ -18,7 +16,7 @@ void main() async {
 }
 
 class NotesApp extends StatelessWidget {
-  const NotesApp({super.key});
+  const NotesApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
