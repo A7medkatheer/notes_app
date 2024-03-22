@@ -31,7 +31,7 @@ class AddNotesBottonSheet extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(
                   left: 20,
-                  right: 2,
+                  right: 20,
                   bottom: MediaQuery.of(context).viewInsets.bottom),
               child: const SingleChildScrollView(
                 child: AddNoteForm(),
