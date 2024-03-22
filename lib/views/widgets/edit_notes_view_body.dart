@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notes_app/models/notes_models.dart';
 import 'package:notes_app/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/views/widgets/custom_text_field.dart';
+import 'package:notes_app/views/widgets/edit_color_list_view.dart';
 import 'package:notes_app/views/widgets/notes_view_appbar.dart';
 
 class EditNotesViewbody extends StatefulWidget {
@@ -57,6 +58,9 @@ class _EditNotesViewbodyState extends State<EditNotesViewbody> {
             },
             hintText: widget.note.subTitle,
             maxLines: 5,
+          ),
+           EditNoteColorsList(
+            note:widget.note ,
           ),
         ],
       ),
